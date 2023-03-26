@@ -7,10 +7,5 @@
     "psr-4": {
       "Nkeneng\\HttpCacheBundleVarnishConfig\\": "src/"
     }
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "php src/setup.php"
-    ]
   }
 }

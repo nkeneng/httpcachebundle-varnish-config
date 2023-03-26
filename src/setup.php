@@ -31,7 +31,7 @@ $routesYaml = <<<'YAML'
 user_context_hash:
     path: /_fos_user_context_hash
 YAML;
-file_put_contents($projectRoot.'/config/routes.yaml', $routesYaml . file_get_contents($projectRoot.'/config/routes.yaml'));
+file_put_contents($projectRoot.'/config/routes.yaml', $routesYaml ."\n \n". file_get_contents($projectRoot.'/config/routes.yaml'));
 
 // Add the PURGE_SERVER env variable to the .env file
 $purgeServer = 'PURGE_SERVER=http://varnish';

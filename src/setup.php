@@ -19,15 +19,15 @@ fos_http_cache:
         hash_cache_ttl: 900
         role_provider: true
 YAML;
-file_put_contents('config/packages/fos_http_cache.yaml', $fosHttpCacheYaml);
+file_put_contents(__DIR__ . '/../../../config/packages/fos_http_cache.yaml', $fosHttpCacheYaml);
 
 // Modify the routes.yaml file to add some content at the beginning
 $routesYaml = <<<'YAML'
 user_context_hash:
     path: /_fos_user_context_hash
 YAML;
-file_put_contents('config/routes.yaml', $routesYaml . file_get_contents('config/routes.yaml'));
+file_put_contents(__DIR__ . '/../../../config/routes.yaml', $routesYaml . file_get_contents(__DIR__ . '/../../../config/routes.yaml'));
 
 // Add the PURGE_SERVER env variable to the .env file
 $purgeServer = 'PURGE_SERVER=http://varnish';
-file_put_contents('.env', $purgeServer . "\n", FILE_APPEND);
+file_put_contents(__DIR__ . '/../../../.env', $purgeServer . "\n", FILE_APPEND);

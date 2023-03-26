@@ -1,0 +1,11 @@
+{
+    "name": "nkeneng/httpcachebundle-varnish-config",
+    "description": "Varnish configuration file for HttpCacheBundle",
+    "type": "library",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Nkeneng\\HttpCacheBundleVarnishConfig\\": "src/"
+        }
+    }
+}

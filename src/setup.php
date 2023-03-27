@@ -50,3 +50,12 @@ $newPackageJson = json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES)
 
 // Write the modified data back to the package.json file
 file_put_contents($projectRoot . '/package.json', $newPackageJson);
+
+
+// replace webpack.config.js with the one from the package
+
+$newWebpackFile = __DIR__ . '/Js/webpack.config.js';
+
+$newFileContent = file_get_contents($newWebpackFile);
+
+file_put_contents($projectRoot.'/webpack.config.js', $newFileContent);

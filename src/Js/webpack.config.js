@@ -14,7 +14,7 @@ Encore
     // public path used by the web server to access the output path
     .setPublicPath('/build')
 
-    .addEntry('main', './assets/main/js/app.js')
+    .addEntry('app', './assets/app.js')
 
     .enableStimulusBridge('./assets/controllers.json')
 
@@ -51,6 +51,12 @@ Encore
     ])
 
     .autoProvidejQuery()
+
+    .configureWatchOptions(function(watchOptions) {
+        // enable polling and check for changes every 250ms
+        // polling is useful when running Encore inside a Virtual Machine
+        watchOptions.poll = 250;
+    });
 
 if (Encore.isProduction()) {
     console.log("Purging css ...");

@@ -2,6 +2,7 @@
   "name": "nkeneng/httpcachebundle-varnish-config",
   "description": "HttpCacheBundle config for Varnish",
   "type": "library",
+  "version": "1.0.0-stable",
   "license": "MIT",
   "require": {},
   "autoload": {

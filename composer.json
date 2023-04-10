@@ -2,6 +2,7 @@
   "name": "nkeneng/httpcachebundle-varnish-config",
   "description": "Varnish configuration file for HttpCacheBundle",
   "type": "library",
+  "license": "MIT",
   "require": {},
   "autoload": {
     "psr-4": {

@@ -1,6 +1,6 @@
 {
   "name": "nkeneng/httpcachebundle-varnish-config",
-  "description": "Varnish configuration file for HttpCacheBundle",
+  "description": "HttpCacheBundle config for Varnish",
   "type": "library",
   "license": "MIT",
   "require": {},
